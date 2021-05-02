@@ -77,7 +77,7 @@ app.post('/send', (req, res) => {
     async function sendEmail(subject, body){
         let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
-            port: PORT,
+            port: port,
             secure: false,
             auth: {
                 user: "amazonpricetracker0@gmail.com",
