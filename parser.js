@@ -12,7 +12,7 @@ const nodemailer = require('nodemailer')
 
 const app = express()          //extra
 
-
+const port = process.env.PORT || 3000                     //For Heroku Deployement
 //View Engine setup
 
 //app.engine('handlebars', exphbs());   //old code for app.engine
@@ -110,8 +110,9 @@ app.post('/send', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Server Started!'));   //extra
-
+app.listen(port, () =>{
+     console.log('Server is up on port ' + port)
+});   //extra
 
 
 
